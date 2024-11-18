@@ -1,5 +1,5 @@
 # Use OpenJDK image
-FROM registry.cn-beijing.aliyuncs.com/docker_image_turn_ark/openjdk17:alpine
+FROM crpi-so2cqseffq3l46dn.cn-chengdu.personal.cr.aliyuncs.com/docker_image_turn_ark/openjdk17
 
 # Copy JAR document to volum
 COPY Docker_web-0.0.1-SNAPSHOT.jar /app.jar
