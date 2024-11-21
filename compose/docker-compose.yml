@@ -29,7 +29,7 @@ services:
                     - mysql
 
         mysql:
-                image: crpi-so2cqseffq3l46dn.cn-chengdu.personal.cr.aliyuncs.com/docker_image_turn_ark/docker_mysql_image:8.0
+                image: crpi-so2cqseffq3l46dn.cn-chengdu.personal.cr.aliyuncs.com/docker_image_turn_ark/docker_mysql_image
                 environment:
                     MYSQL_ROOT_PASSWORD: 123456
                     MYSQL_DATABASE: duel_person
