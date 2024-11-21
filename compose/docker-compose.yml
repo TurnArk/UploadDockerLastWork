@@ -4,8 +4,7 @@ services:
                 image: crpi-so2cqseffq3l46dn.cn-chengdu.personal.cr.aliyuncs.com/docker_image_turn_ark/docker_frontend_image
                 ports:
                     - "5173:80"
-                networks:
-                    - lastwork_mynetwork 
+                network_mode: host
                 depends_on:
                     - backend
 
@@ -14,8 +13,7 @@ services:
                 image: crpi-so2cqseffq3l46dn.cn-chengdu.personal.cr.aliyuncs.com/docker_image_turn_ark/docker_backend_image
                 ports:
                     - "7078:7078"
-                networks:
-                    - lastwork_mynetwork
+                network_mode: host
                 environment:
                     - DB_HOST=mysql  # 数据库服务名（容器名），Docker Compose 会解析为数据库容器的 IP 地址
                     - DB_PORT=3306  # MySQL 默认端口
@@ -35,14 +33,7 @@ services:
                     MYSQL_DATABASE: duel_person
                 volumes:
                     - mysql-data:/var/lib/mysql
-                networks:
-                    - lastwork_mynetwork
-
-
-networks:
-        lastwork_mynetwork:
-                driver: bridge
-                external: true
+                network_mode: host
 
 volumes:
     backend-data:
