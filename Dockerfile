@@ -1,5 +1,5 @@
 # 基于官方 MySQL 镜像
-FROM mysql:8.0
+FROM crpi-so2cqseffq3l46dn.cn-chengdu.personal.cr.aliyuncs.com/docker_image_turn_ark/docker_mysql_image:8.0
 
 # 设置环境变量以自动配置 MySQL
 ENV MYSQL_ROOT_PASSWORD=123456
